@@ -1,0 +1,37 @@
+node_modules/
+package-lock.json
+dist/
+.env
+*.db
+*.db-shm
+*.db-wal
+.claude/
+.claude-uploads/
+.vscode/
+.DS_Store
+CLAUDE.md
+.bot.lock
+.tray.pid
+bot.log
+bot-error.log
+menubar/ClaudeBotMenu
+tray/ClaudeBotTray.exe
+ClaudeBot.exe
+com.claude-discord.plist
+.tray-lang
+usage-debug.log
+usage-error.log
+
+# examples/ ship their own .claude/agents and CLAUDE.md on purpose — these
+# define the agent team itself, unlike the root .claude/ and CLAUDE.md above
+# which are local-only dev config.
+!examples/**/.claude/
+!examples/**/.claude/**
+!examples/**/CLAUDE.md
+
+# don't ship generated reports or debug specs from example runs
+examples/**/output/*
+!examples/**/output/.gitkeep
+examples/**/tools/node_modules/
+examples/**/tools/package-lock.json
+examples/**/output/.spec-*.json
